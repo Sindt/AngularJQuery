@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5//angular-route.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="js/angular.js"></script>
+    </head>
+    <body ng-controller="HttpCtrl as ctrl">
+        <header>
+
+        </header>
+        <main class="container">
+            <h2>All Members</h2>
+            <table class="table" style="width: 50%">
+                <thead>
+                    <tr><td>ID</td><td>Name</td><td>Age</td><td>E-mail</td><td>Eye Color</td></tr>
+                </thead>
+                <tbody id="tbody" ng-repeat="member in ctrl.members">
+                    <tr>
+                        <td>{{member.id}}</td>
+                        <td>{{member.name}}</td>
+                        <td>{{member.age}}</td>
+                        <td>{{member.email}}</td>
+                        <td>{{member.eyeColor}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </main>
+        <div>
+            <a href='index.html'>Back</a>
+        </div>
+    </body>
+</html>
